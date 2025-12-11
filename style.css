@@ -159,3 +159,46 @@ h3{font-family:'Playfair Display',serif;color:var(--gold-soft);font-size:22px;ma
 
 /* accessibility focus */
 .contact-btn:focus,.fab:focus,button:focus{outline:3px solid rgba(212,175,55,0.12);outline-offset:3px}
+
+\/* ---- Mobile Typography Scaling (Phones < 480px) ---- */
+@media (max-width: 480px){
+
+  body{
+    font-size: 14px; /* smaller base text */
+  }
+
+  h1, .title{
+    font-size: 20px !important;
+  }
+
+  h2{
+    font-size: 18px !important;
+  }
+
+  h3{
+    font-size: 16px !important;
+  }
+
+  .price{
+    font-size: 18px !important;
+  }
+
+  .catalog-card h4{
+    font-size: 15px !important;
+  }
+
+  .small-muted, .muted-sm{
+    font-size: 12px !important;
+  }
+
+  /* buttons (WhatsApp etc) */
+  button, .btn{
+    font-size: 13px !important;
+  }
+
+  /* top booking form inputs */
+  .form-control, .form-select{
+    font-size: 14px !important;
+  }
+
+}
