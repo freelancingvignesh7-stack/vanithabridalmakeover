@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vanitha Bridal Makeover — Catalogue</title>
+  <meta name="description" content="Vanitha Bridal Makeover — Bridal, Bridesmaid, Groom & Special Occasion makeovers. Book via WhatsApp.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP (core + ScrollTrigger) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- INTRO OVERLAY: Blocks the page until animation finishes -->
+  <div id="introOverlay" role="presentation" aria-hidden="true">
+    <div id="irisRing" aria-hidden="true"></div>
+    <img id="introLogo" src="images/logo.png" alt="Vanitha Bridal Makeover logo" />
+  </div>
+
+  <!-- Header -->
+  <header class="d-flex justify-content-between align-items-center">
+    <div class="brand">
+      <img src="images/logo.png" alt="Vanitha Logo" id="siteLogo">
+      <div>
+        <h1>Vanitha Bridal Makeover</h1>
+        <p class="muted-sm">383, Mettupalayam Rd, Bharathiyar Nagar · Coimbatore · +91 72000 51644</p>
+      </div>
+    </div>
+
+    <div class="contact-actions">
+      <a class="contact-btn call d-none d-md-inline-flex" href="tel:+917200051644" aria-label="Call +91 72000 51644">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.06.424.22.83.47 1.19l.92 1.2a1 1 0 0 1-.2 1.3l-1 1a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.87.3 2.03.75 2.81 1.02z" stroke="#111" stroke-width="1.2"></path></svg>
+        Call
+      </a>
+
+      <a class="contact-btn whatsapp d-none d-md-inline-flex" href="https://wa.me/917200051644" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.51 2 2 6.49 2 12.02c0 2.12.61 4.09 1.67 5.77L2 22l4.45-1.38A9.98 9.98 0 0 0 12.04 22c5.53 0 10.04-4.49 10.04-9.98C22.08 6.49 17.57 2 12.04 2zM16.57 15.05c-.24.68-1.4 1.28-2.18 1.36-.6.07-1.05.12-2.07-.12-2.42-.56-4.03-3.07-4.14-3.23-.11-.15-.9-1.22-.9-2.33 0-1.1.94-1.6 1.26-1.6.33 0 .72.02 1.03.35.32.33.45.62.63 1.04.18.41.64 1.36.7 1.46.06.1.1.2.02.32-.09.13-.15.28-.32.42-.16.14-.37.3-.53.46-.17.16-.35.33-.15.63.2.31 1.14 1.83 2.47 2.88 1.71 1.42 2.73 1.69 3.33 1.88.6.19 1.08.16 1.48.1.4-.07 1.28-.52 1.46-1.02.18-.5.18-.93.13-1.02-.05-.09-.18-.14-.45-.26-.27-.12-1.6-.79-1.86-.88-.25-.09-.43-.13-.56.13z"/></svg>
+        WhatsApp
+      </a>
+
+      <a class="contact-btn ig d-none d-md-inline-flex" href="https://instagram.com/vanithabridalmakeover" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6zm5.2-.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg>
+        Instagram
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero pre-anim container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="title">Exquisite Bridal Artistry — Camera-ready, Timeless Beauty</div>
+          <div class="sub">Cinematic HD Bridal, Airbrush & event makeovers. Packages for brides, bridesmaids, grooms and special occasions. Trial sessions available on request.</div>
+        </div>
+
+        <!-- Top booking form -->
+        <div class="col-lg-4">
+          <div class="contact-card">
+            <form id="waFormTop">
+              <div class="row g-2">
+                <div class="col-12"><input id="nameTop" class="form-control" placeholder="Name" required></div>
+                <div class="col-12"><input id="phoneTop" class="form-control" placeholder="Phone number" required inputmode="tel"></div>
+                <div class="col-12"><input id="venueTop" class="form-control" placeholder="Venue (optional)"></div>
+
+                <div class="col-6">
+                  <select id="sessionTop" class="form-select">
+                    <option value="Bridal">Bridal</option>
+                    <option value="Bridesmaid">Bridesmaid</option>
+                    <option value="Groom">Groom</option>
+                    <option value="Baby Shower">Baby Shower</option>
+                    <option value="Engagement">Engagement</option>
+                  </select>
+                </div>
+
+                <div class="col-6">
+                  <select id="occasionTop" class="form-select">
+                    <option value="Wedding">Wedding</option>
+                    <option value="Reception">Reception</option>
+                    <option value="Function">Function</option>
+                    <option value="Photoshoot">Photoshoot</option>
+                  </select>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn btn-primary w-100" style="background:linear-gradient(135deg,var(--pink-accent),#ff76b2);border:0">Send Enquiry via WhatsApp</button>
+                </div>
+
+                <div class="col-12 muted-sm" style="margin-top:6px">Travelling & jewellery charges extra. Trial sessions available on request.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-4" id="packages">
+    <h3>Package Catalogue</h3>
+    <p class="small-muted">Per session pricing. Travelling, jewels and extra saree draping are additional. Trials not included unless mentioned.</p>
+
+    <div class="catalog-grid">
+
+      <!-- Bridesmaid Basic -->
+      <div class="catalog-card pre-anim">
+        <h4>Bridesmaid — Basic Makeup</h4>
+        <div class="price">₹6,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+        </ul>
+      </div>
+
+      <!-- Bridesmaid Natural -->
+      <div class="catalog-card pre-anim">
+        <h4>Bridesmaid — Natural Makeup</h4>
+        <div class="price">₹10,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+          <li>Flowers</li>
+        </ul>
+      </div>
+
+      <!-- Groom Package -->
+      <div class="catalog-card pre-anim">
+        <h4>Groom Package</h4>
+        <div class="price">₹4,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+        </ul>
+      </div>
+
+      <!-- Baby shower / Engagement / Puberty Normal -->
+      <div class="catalog-card pre-anim">
+        <h4>Baby Shower • Engagement • Puberty (Normal Makeup)</h4>
+        <div class="price">₹10,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+        </ul>
+      </div>
+
+      <!-- Baby shower / Engagement / Puberty HD -->
+      <div class="catalog-card pre-anim">
+        <h4>Baby Shower • Engagement • Puberty (HD Makeup)</h4>
+        <div class="price">₹12,500</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+        </ul>
+      </div>
+
+      <!-- HD Pro -->
+      <div class="catalog-card pre-anim">
+        <h4>Bridal — HD Pro</h4>
+        <div class="price">₹15,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+          <li>Flowers</li>
+        </ul>
+      </div>
+
+      <!-- HD Premium -->
+      <div class="catalog-card pre-anim">
+        <h4>Bridal — HD Premium</h4>
+        <div class="price">₹17,500</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+          <li>Flowers</li>
+        </ul>
+      </div>
+
+      <!-- Ultra HD -->
+      <div class="catalog-card pre-anim">
+        <h4>Bridal — Ultra HD</h4>
+        <div class="price">₹20,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+          <li>Flowers</li>
+        </ul>
+      </div>
+
+      <!-- Airbrush Makeup -->
+      <div class="catalog-card pre-anim">
+        <h4>Airbrush Makeup</h4>
+        <div class="price">₹25,000</div>
+        <ul class="small-muted">
+          <li>Makeup</li>
+          <li>Hairdo</li>
+          <li>Saree drape</li>
+          <li>Lens and lashes</li>
+          <li>Hair extensions</li>
+          <li>Safety pins and hair pins</li>
+          <li>Flowers</li>
+        </ul>
+      </div>
+
+      <!-- Notes -->
+      <div class="catalog-card pre-anim">
+        <h4>Important Notes</h4>
+        <ul class="small-muted">
+          <li>Packages are per session</li>
+          <li>Travelling charges extra</li>
+          <li>Jewels extra</li>
+          <li>Extra saree draping charge extra</li>
+          <li>Trial is not included in packages</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="container mt-5">
+      <h3>Our Work</h3>
+      <p class="small-muted">Recent makeovers — tap to view full size.</p>
+
+      <div class="gallery">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=1200&h=900&fit=crop&q=60" alt="photo1">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=900&fit=crop&q=60" alt="photo2">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&h=900&fit=crop&q=60" alt="photo3">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1605288857-3b2e19ea46ca?w=1200&h=900&fit=crop&q=60" alt="photo4">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1525875975-e6f1e26d5366?w=1200&h=900&fit=crop&q=60" alt="photo5">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&h=900&fit=crop&q=60" alt="photo6">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1508216336769-3d0bd7b3b6f3?w=1200&h=900&fit=crop&q=60" alt="photo7">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200&h=900&fit=crop&q=60" alt="photo8">
+        <img class="photo pre-anim" src="https://images.unsplash.com/photo-1520975698513-043d4ba9f3c4?w=1200&h=900&fit=crop&q=60" alt="photo9">
+      </div>
+    </section>
+
+    <!-- Videos & testimonials -->
+    <section class="container mt-5 mb-6">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <h3>Makeover Videos</h3>
+          <div class="videos pre-anim">
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Makeover 1" allowfullscreen></iframe>
+            <div style="height:18px"></div>
+            <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Makeover 2" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>Client Feedback</h3>
+          <div class="testimonial pre-anim"><strong>Monica Rajalakshmi</strong><p>Loved the service especially Hydra Facial. Do visit and experience it ❤️</p></div>
+          <div class="testimonial pre-anim"><strong>Sivaranjani Selvaraj</strong><p>Awesome and lovely service. Fabulous work, I personally love it! 💗</p></div>
+          <div class="testimonial pre-anim"><strong>Sangeetha Mouna</strong><p>Highly recommend! Professional, friendly and extremely knowledgeable. Extra care in every service 🙏</p></div>
+          <div class="testimonial pre-anim"><strong>Sruthi Ragavan</strong><p>Her work was beautiful & amazing. Thank you for making me look so beautiful 😍🙏</p></div>
+          <div class="testimonial pre-anim"><strong>Anitha M</strong><p>Awesome threading, facial & haircut. Much satisfied. 🙏</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating contact FABs -->
+  <div class="fab-group" aria-hidden="false">
+    <a class="fab wa" href="https://wa.me/917200051644" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+      <!-- whatsapp svg -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.51 2 2 6.49 2 12.02c0 2.12.61 4.09 1.67 5.77L2 22l4.45-1.38A9.98 9.98 0 0 0 12.04 22c5.53 0 10.04-4.49 10.04-9.98C22.08 6.49 17.57 2 12.04 2zM16.57 15.05c-.24.68-1.4 1.28-2.18 1.36-.6.07-1.05.12-2.07-.12-2.42-.56-4.03-3.07-4.14-3.23-.11-.15-.9-1.22-.9-2.33 0-1.1.94-1.6 1.26-1.6.33 0 .72.02 1.03.35.32.33.45.62.63 1.04.18.41.64 1.36.7 1.46.06.1.1.2.02.32-.09.13-.15.28-.32.42-.16.14-.37.3-.53.46-.17.16-.35.33-.15.63.2.31 1.14 1.83 2.47 2.88 1.71 1.42 2.73 1.69 3.33 1.88.6.19 1.08.16 1.48.1.4-.07 1.28-.52 1.46-1.02.18-.5.18-.93.13-1.02-.05-.09-.18-.14-.45-.26-.27-.12-1.6-.79-1.86-.88-.25-.09-.43-.13-.56.13z"/></svg>
+    </a>
+
+    <a class="fab call" href="tel:+917200051644" title="Call us" aria-label="Call us">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#111" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.06.424.22.83.47 1.19l.92 1.2a1 1 0 0 1-.2 1.3l-1 1a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.87.3 2.03.75 2.81 1.02z" /></svg>
+    </a>
+
+    <a class="fab ig" href="https://instagram.com/vanithabridalmakeover" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6zm5.2-.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg>
+    </a>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  // Helper: Build WhatsApp message string
+  function buildMessage(obj){
+    return Object.entries(obj).map(([k,v])=>`${k}: ${v}`).join('\n');
+  }
+
+  // Main animation & page logic
+  document.addEventListener('DOMContentLoaded', function(){
+    gsap.registerPlugin(ScrollTrigger);
+
+    const overlay = document.getElementById('introOverlay');
+    const logo = document.getElementById('introLogo');
+    const iris = document.getElementById('irisRing');
+
+    // Make sure overlay is visible
+    gsap.set(overlay, { opacity: 1 });
+
+    const intro = gsap.timeline();
+
+    // 1) Logo pop-in
+    intro.fromTo(
+      logo,
+      { scale: 0.6, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.6)' }
+    );
+
+    // 2) Iris flash
+    intro.fromTo(
+      iris,
+      { opacity: 0, scale: 0.4 },
+      { opacity: 1, scale: 1, duration: 0.2, ease: 'power2.out' },
+      "-=0.3"
+    );
+
+    intro.to(iris, {
+      opacity: 0,
+      scale: 1.4,
+      duration: 0.3,
+      ease: 'power2.in'
+    });
+
+    // 3) Small pause
+    intro.to({}, { duration: 0.2 });
+
+    // 4) Fade overlay to reveal site
+    intro.to(overlay, {
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+      onComplete: () => {
+        overlay.remove();
+        document.body.classList.add('ready');
+      }
+    });
+
+    // 5) Safety fallback (animation must not break)
+    setTimeout(() => {
+      if (!document.body.classList.contains('ready')) {
+        try { overlay.remove(); } catch(e){}
+        document.body.classList.add('ready');
+      }
+    }, 2500);
+
+    // 6) Page element reveal animation
+    gsap.utils.toArray('.pre-anim').forEach((el,i)=>{
+      gsap.fromTo(el,
+        { y: 26, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.72,
+          delay: 0.3 + i * 0.05,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 92%'
+          }
+        }
+      );
+    });
+
+    // 7) Floating buttons animation
+    gsap.to('.fab', {
+      y: -6,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      duration: 2.2
+    });
+
+    // 8) Gallery animations
+    document.querySelectorAll('.gallery .photo').forEach(img => {
+      img.addEventListener('mouseenter', () =>
+        gsap.to(img, { scale: 1.04, duration: 0.28, ease: 'power3.out' })
+      );
+      img.addEventListener('mouseleave', () =>
+        gsap.to(img, { scale: 1, duration: 0.22, ease: 'power2.out' })
+      );
+      img.addEventListener('click', () => window.open(img.src, '_blank'));
+    });
+  });
+
+  // WhatsApp form handler
+  document.getElementById('waFormTop').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const name = document.getElementById('nameTop').value.trim();
+    const phone = document.getElementById('phoneTop').value.trim();
+    const venue = document.getElementById('venueTop').value.trim();
+    const session = document.getElementById('sessionTop').value;
+    const occasion = document.getElementById('occasionTop').value;
+
+    const msg = buildMessage({
+      Name: name || '—',
+      Phone: phone || '—',
+      Venue: venue || '—',
+      Session: session || '—',
+      Occasion: occasion || '—'
+    });
+
+    const url = 'https://wa.me/917200051644?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+  });
+
+  document.getElementById('phoneTop').setAttribute('inputmode','tel');
+</script>
+
+</body>
+</html>
