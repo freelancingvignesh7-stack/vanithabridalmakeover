@@ -399,3 +399,49 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.45);
     font-size: 18px;
   }
 }
+
+
+
+
+
+/* FORCE HEADER SLIDE BEHAVIOR */
+header {
+  transition: transform 0.35s ease !important;
+  will-change: transform;
+}
+
+/* hide */
+header.header-hide {
+  transform: translateY(-110%) !important;
+}
+
+/* show */
+header.header-show {
+  transform: translateY(0) !important;
+}
+
+
+
+
+
+
+
+
+/* FLOAT BAR SCROLL EFFECT */
+.float-bar {
+  transition: transform 0.35s ease, opacity 0.35s ease !important;
+  will-change: transform, opacity;
+}
+
+/* hide bar */
+.float-bar.float-hide {
+  transform: translate(-50%, 120%) scale(0.9) !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* show bar */
+.float-bar.float-show {
+  transform: translate(-50%, 0) scale(1) !important;
+  opacity: 1 !important;
+}
