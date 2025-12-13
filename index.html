@@ -22,6 +22,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
+
+
+
+
 <body>
 
   <!-- INTRO OVERLAY: Blocks the page until animation finishes -->
@@ -408,5 +412,67 @@
 
   <!-- Site JS (multi-session + gsap) -->
   <script src="script.js"></script>
+
+  <script>
+  (function () {
+    let lastScroll = window.pageYOffset || 0;
+    const header = document.querySelector("header");
+
+    if (!header) return;
+
+    // show header initially
+    header.classList.add("header-show");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || 0;
+
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        // scrolling DOWN → hide header
+        header.classList.add("header-hide");
+        header.classList.remove("header-show");
+      } else {
+        // scrolling UP → show header
+        header.classList.add("header-show");
+        header.classList.remove("header-hide");
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+  })();
+  </script>
+
+
+
+  <script>
+  (function () {
+    let lastScroll = window.pageYOffset || 0;
+    const floatBar = document.querySelector(".float-bar");
+
+    if (!floatBar) return;
+
+    // show initially
+    floatBar.classList.add("float-show");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || 0;
+
+      if (currentScroll > lastScroll && currentScroll > 120) {
+        // scrolling down → hide
+        floatBar.classList.add("float-hide");
+        floatBar.classList.remove("float-show");
+      } else {
+        // scrolling up → show
+        floatBar.classList.add("float-show");
+        floatBar.classList.remove("float-hide");
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+  })();
+  </script>
+
+
+
+
 </body>
 </html>
