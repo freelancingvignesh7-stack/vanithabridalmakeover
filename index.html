@@ -66,6 +66,26 @@
   margin-top: auto;   /* MAGIC LINE */
 }
 
+
+/* Force simple 4 / 8 split without changing HTML */
+.brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex: 1 !important;
+}
+
+/* Logo = 4 parts */
+.brand img {
+  flex: 0 0 33.333% !important;
+  max-width: 70px !important;
+}
+
+/* Text = 8 parts */
+.brand > div {
+  flex: 0 0 66.666% !important;
+}
+
 </style>
 
 
