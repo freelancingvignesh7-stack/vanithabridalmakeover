@@ -445,3 +445,54 @@ header.header-show {
   transform: translate(-50%, 0) scale(1) !important;
   opacity: 1 !important;
 }
+
+
+
+/* ===== MOBILE HEADER: RIGHT-SIDE TOGGLER, NO OVERLAP ===== */
+@media (max-width: 991.98px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Brand stays left but can shrink */
+  header .brand {
+    flex: 1;
+    min-width: 0; /* VERY IMPORTANT */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide address line */
+  header .brand .muted-sm {
+    display: none;
+  }
+
+  /* Prevent title from colliding */
+  header .brand h1 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Navbar always on right */
+  .luxury-nav {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Toggler alignment */
+  .navbar-toggler {
+    padding: 6px 10px;
+  }
+
+}
+header .brand h1 {
+  white-space: normal;
+}
