@@ -32,11 +32,14 @@
 html,
 body {
   margin: 0;
+body {
+  margin: 0;
   background: linear-gradient(
     180deg,
-    var(--bg-main) 0%,
-    var(--bg-soft) 65%
+    #fff7fa 0%,
+    #f3dfe8 65%
   );
+
 
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
@@ -535,3 +538,4 @@ header.header-show {
 header .brand h1 {
   white-space: normal;
 }
+
