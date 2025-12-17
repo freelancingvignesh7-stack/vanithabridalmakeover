@@ -4,6 +4,17 @@
 * {
   box-sizing: border-box;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #d4af37 !important;
+}
+strong {
+  color: #d4af37 !important;
+}
 
 :root {
   /* Brand */
@@ -12,33 +23,38 @@
   --pink-accent: #ff4d9a;
 
   /* Backgrounds */
-  --bg-main: #ffffff;
-  --bg-soft: #f6eff2;
-  --bg-muted: #f4eff1;
+  --bg-main: #0b0206;
+  --bg-soft: #1a050d;
+  --bg-muted: #2a0816;
 
-  /* Text */
-  --text-main: #1a1a1a;
-  --text-muted: #6f6f6f;
+  /* Text (NO GREY) */
+  --text-main: #fff3f8;
+  --text-muted: #ffb6cf;
+  --text-accent: #ff4d9a;
 
   /* Cards / Glass */
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --glass: rgba(255, 255, 255, 0.75);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --glass: rgba(255, 255, 255, 0.06);
 
   /* Borders & Shadows */
   --border-gold: rgba(212, 175, 55, 0.35);
-  --shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
 }
+
+
+
 
 html,
 body {
-  margin: 0;
-body {
-  margin: 0;
   background: linear-gradient(
     180deg,
-    #fff7fa 0%,
-    #f3dfe8 65%
+    #2a0816 0%,   /* deep wine pink */
+    #12050b 45%,  /* dark rose-black */
+    #000000 100%  /* pure black */
   );
+}
+
+
 
 
   color: var(--text-main);
@@ -57,11 +73,15 @@ img { max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* MATCHED SITE BACKGROUND */
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #f6eff2 65%
+    #2a0816 0%,   /* wine pink */
+    #1a050d 45%,  /* dark rose */
+    #0b0206 100%  /* near black */
   );
+
   z-index: 9999;
 }
 
@@ -70,21 +90,55 @@ img { max-width: 100%; }
   height: 150px;
   object-fit: contain;
   border-radius: 100%;
-  background: #ffffff;
-  filter: drop-shadow(0 10px 30px rgba(212,175,55,0.35));
+
+  background: rgba(255,255,255,0.95); /* logo stays clean */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    0 0 35px rgba(212,175,55,0.35);
 }
 
-/* Light gold / pink iris ring */
+/* Gold + Pink iris ring */
 #irisRing {
   position: absolute;
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  border: 4px solid rgba(212, 175, 55, 0.45);
+
+  border: 4px solid rgba(212,175,55,0.55);
   box-shadow:
-    0 0 25px rgba(212, 175, 55, 0.25),
-    0 0 45px rgba(255, 77, 154, 0.15);
+    0 0 25px rgba(212,175,55,0.35),
+    0 0 45px rgba(255,77,154,0.25);
 }
+
+
+
+.price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 16px auto;
+  .sub {
+    color: #f5ecd2 !important; /* very light gold */
+  }
+
+
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  color: #e8a2b8 !important;            /* rose-gold price */
+}
+
+
+.small-muted {
+  color: #f5ecd2 !important; /* very light gold */
+}
+.sub {
+  color: #f5ecd2 !important; /* very light gold */
+}
+
+
 
 
 /* ---------------------------------------------------
@@ -146,62 +200,124 @@ header {
   box-shadow: 0 12px 36px rgba(0,0,0,0.6);
 }
 
-/* ---------------------------------------------------
-   FORM INPUTS
---------------------------------------------------- */
 .form-control,
 .form-select {
-  background: #ffffff;
-  color: var(--text-main);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  background-color: #1a050d !important;      /* dark rose background */
+  color: #f5ecd2 !important;                 /* light gold text */
+
+  border: 1px solid rgba(212,175,55,0.45) !important;
+  padding: 12px !important;
+  border-radius: 10px !important;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 6px 18px rgba(0,0,0,0.45);
+
+  font-weight: 500;
 }
 
-/* Placeholder */
+/* Placeholder – soft light gold */
 .form-control::placeholder {
-  color: rgba(0, 0, 0, 0.45);
+  color: #c9a96a !important;
+  opacity: 1;
 }
 
-/* GOLD SELECT (dropdowns) */
+/* Select placeholder (disabled option) */
+.form-select option[value=""],
+.form-select option:disabled {
+  color: #c9a96a !important;
+}
+
+/* Focus – gold glow */
+.form-control:focus,
+.form-select:focus {
+  background-color: #2a0816 !important;
+  border-color: #d4af37 !important;
+  box-shadow:
+    0 0 0 0.18rem rgba(212,175,55,0.25),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  outline: none !important;
+}
+.mb-2 .form-control,
+.mb-2 .form-select {
+  background-color: #1a050d !important;   /* dark rose */
+  color: #f5ecd2 !important;              /* light gold text */
+
+  border: 1px solid rgba(212,175,55,0.45) !important;
+  border-radius: 10px;
+  padding: 12px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 6px 18px rgba(0,0,0,0.45);
+}
+.mb-2 .form-control::placeholder {
+  color: #c9a96a !important;
+}
+.mb-2 .form-select option:disabled {
+  color: #c9a96a !important;
+}
+
+
+
+//* GOLD SELECT – MUTED / LUXURY */
 .gold-select {
-  background-color: #ffffff !important;
-  color: var(--gold) !important;
+  background-color: rgba(212,175,55,0.10) !important; /* muted gold bg */
+  color: #f5ecd2 !important;                          /* light gold text */
   font-weight: 600;
-  border: 1px solid rgba(212, 175, 55, 0.35);
+
+  border: 1px solid rgba(212,175,55,0.55);
+  border-radius: 10px;
 }
 
+/* Dropdown options */
 .gold-select option {
-  background: #ffffff;
-  color: #1a1a1a;
+  background: #1a050d;        /* dark rose menu */
+  color: #f5ecd2;
 }
+
+/* Focus state */
 .gold-select:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 0.18rem rgba(212, 175, 55, 0.25);
+  background-color: rgba(212,175,55,0.15) !important;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 0.18rem rgba(212,175,55,0.25);
   outline: none;
 }
 
 
 /* SESSION BLOCKS */
 .session-block {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);          /* lighter glass */
+  border: 1px solid rgba(212,175,55,0.35);      /* soft gold border */
   border-radius: 12px;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 14px;
+
+  color: #f5ecd2 !important;                    /* light gold text */
 }
 
-/* Add/remove buttons */
+/* Force all text inside to be light gold */
+.session-block * {
+  color: #f5ecd2 !important;
+}
+
+/* Add session button – gold */
 #addSessionBtn {
   border: 1px solid var(--gold);
   color: var(--gold);
+  background: rgba(212,175,55,0.08);
+  font-weight: 600;
 }
+
+/* Remove session button – soft red but readable */
 .remove-session-btn {
-  border: 1px solid #ff4d4d;
-  color: #ff4d4d;
+  border: 1px solid rgba(255,77,77,0.7);
+  color: #ffd6d6;
+  background: rgba(255,77,77,0.08);
   padding: 2px 10px;
+  border-radius: 6px;
 }
+
 
 /* ---------------------------------------------------
    PACKAGE GRID
@@ -539,3 +655,68 @@ header .brand h1 {
   white-space: normal;
 }
 
+
+
+/* =====================
+   FAQ ACCORDION – LUXURY THEME
+   ===================== */
+
+.accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: rgba(212,175,55,0.35);
+}
+
+/* Accordion item */
+.accordion-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+/* Header button */
+.accordion-button {
+  background: rgba(0,0,0,0.35) !important;
+  color: #d4af37 !important;              /* gold question */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 14px 18px;
+  box-shadow: none !important;
+}
+
+/* Remove default Bootstrap arrow color */
+.accordion-button::after {
+  filter: invert(1) sepia(1) saturate(4) hue-rotate(15deg);
+}
+
+/* Hover */
+.accordion-button:hover {
+  background: rgba(0,0,0,0.45) !important;
+}
+
+/* Active / open state */
+.accordion-button:not(.collapsed) {
+  background: rgba(0,0,0,0.55) !important;
+  color: #f5d77a !important;
+  box-shadow: inset 0 -1px 0 rgba(212,175,55,0.25);
+}
+
+/* Body */
+.accordion-body {
+  background: rgba(255,255,255,0.04);
+  color: #f5ecd2 !important;              /* light gold text */
+  padding: 16px 18px;
+  line-height: 1.6;
+}
+
+/* Small muted text inside accordion */
+.accordion-body.small-muted {
+  color: #f5ecd2 !important;
+}
+
+/* Remove focus outline */
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
