@@ -141,48 +141,57 @@
   .navbar-toggler-icon {
   filter: invert(1);
   }
-/* Ensure visibility */
-.pre-anim { opacity: 1 !important; transform: none !important; }
+  /* Ensure visibility */
+  .pre-anim {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
-/* Gallery grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 18px;
-}
+  /* Gallery grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+  }
 
-/* Image card */
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  cursor: pointer;
-  background: #111;
-}
+  /* Image card */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    background: #ffffff; /* light base */
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .6s ease;
-}
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+  }
 
-.gallery-item:hover img {
-  transform: scale(1.08);
-}
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
 
-/* Overlay */
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,.65), transparent);
-  opacity: 0;
-  transition: opacity .4s ease;
-}
+  /* Overlay (light + luxury) */
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
 
 /* Modal image */
 .modal-img {
@@ -238,7 +247,6 @@
     <!-- OLD + NEW IMAGES -->
     <!-- Just keep adding images here -->
     <!-- Example images -->
-    <div class="gallery-item pre-anim"><img src="Gallery/1.png" alt=""></div>
     <div class="gallery-item pre-anim"><img src="Gallery/2.png" alt=""></div>
     <div class="gallery-item pre-anim"><img src="Gallery/3.png" alt=""></div>
     <div class="gallery-item pre-anim"><img src="Gallery/4.png" alt=""></div>

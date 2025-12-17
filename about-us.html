@@ -24,6 +24,21 @@
 </head>
 
 <style>
+
+
+.founder-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.philosophy-list li {
+  margin-bottom: 6px;
+}
+
 /* Ensure content visible even if GSAP delays */
 .pre-anim {
   opacity: 1 !important;
@@ -201,31 +216,52 @@ filter: invert(1);
 <section class="container mt-4">
   <div class="row g-4 align-items-center">
 
+    <!-- Founder + Story -->
     <div class="col-lg-6 pre-anim">
-      <h3>Our Story</h3>
+      <div class="d-flex align-items-center mb-3">
+        <img
+          src="images/founder-vanitha.jpg"
+          alt="Vanitha – Founder & Lead Makeup Artist"
+          class="founder-img"
+        />
+        <div class="ms-3">
+          <h3 class="mb-1">Our Story</h3>
+          <p class="small-muted mb-0">
+            Vanitha • Founder & Lead Makeup Artist
+          </p>
+          <p class="small-muted mb-0">
+            10+ Years of Professional Experience
+          </p>
+        </div>
+      </div>
+
       <p class="small-muted">
-        Vanitha Bridal Makeover was founded with a simple belief — every bride
-        deserves to feel confident, radiant and truly herself on her special day.
+        Vanitha Bridal Makeover was founded with a heartfelt belief —
+        every bride deserves to feel confident, radiant, and truly herself
+        on her most special day.
       </p>
+
       <p class="small-muted">
-        With years of experience in bridal and professional makeup, we specialize
-        in creating looks that enhance natural beauty while ensuring a flawless,
-        camera-ready finish.
+        With over a decade of hands-on experience in bridal and professional makeup,
+        Vanitha has worked with hundreds of brides, creating timeless looks that
+        enhance natural beauty while delivering a flawless, camera-ready finish.
       </p>
     </div>
 
+    <!-- Philosophy -->
     <div class="col-lg-6 pre-anim">
       <h3>Our Philosophy</h3>
-      <ul class="small-muted">
-        <li>Enhance, never overpower</li>
-        <li>Customize every look</li>
-        <li>Use only premium & hygienic products</li>
-        <li>Respect traditions while embracing modern styles</li>
+      <ul class="small-muted philosophy-list">
+        <li>Enhance natural beauty — never overpower</li>
+        <li>Customize every look to suit skin, outfit & rituals</li>
+        <li>Use only premium, hygienic and skin-safe products</li>
+        <li>Respect traditions while embracing modern elegance</li>
       </ul>
     </div>
 
   </div>
 </section>
+
 
 <!-- EXPERIENCE -->
 <section class="container mt-5 pre-anim">
