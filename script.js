@@ -199,9 +199,16 @@ document.getElementById("makeupForm").addEventListener("submit", e => {
 
   const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
+  const eventDate = document.getElementById("eventDate").value;
   const venue = document.getElementById("venue").value.trim();
 
-  let msg = `Name: ${name}\nPhone: ${phone}\nVenue: ${venue || "—"}\n\n`;
+  let msg =
+  `Name: ${name}
+  Phone: ${phone}
+  Event Date: ${eventDate}
+  Venue: ${venue || "—"}
+
+  `;
 
   const blocks = document.querySelectorAll(".session-block");
 
