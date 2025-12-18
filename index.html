@@ -248,6 +248,17 @@
                 </div>
 
                 <div class="col-12">
+                  <input
+                    id="eventDate"
+                    type="date"
+                    class="form-control"
+                    required
+                    onclick="this.showPicker && this.showPicker()">
+                </div>
+
+
+
+                <div class="col-12">
                   <input id="venue" class="form-control" placeholder="Venue (optional)">
                 </div>
 
@@ -487,8 +498,6 @@
               <div class="catalog-cta">Enquire Now</div>
         </div>
 
-
-
       </div>
       <br>
       <div class="catalog-card notes-highlight pre-anim">
@@ -672,6 +681,21 @@
       });
     });
   })();
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const dateInput = document.getElementById("eventDate");
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, "0");
+  const dd = String(today.getDate()).padStart(2, "0");
+
+  dateInput.min = `${yyyy}-${mm}-${dd}`;
+});
+
   </script>
 
 
