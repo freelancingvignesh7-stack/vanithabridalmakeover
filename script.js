@@ -60,8 +60,8 @@ const functionMap = {
 /* MAKEUP TYPE LISTS BY CATEGORY */
 const makeupMap = {
   "Bridal": [
-    "HD Pro",
     "HD Premium",
+    "Soft Glam",
     "Ultra HD",
     "Airbrush Makeup"
   ],
