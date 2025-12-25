@@ -151,57 +151,63 @@
    =============================== */
 
 /* GRID */
-/* GRID */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
-/* CARD */
-.gallery-item {
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Sizes */
+.gallery-item.big {
+  height: 420px;
+}
+
+.gallery-item.wide {
+  height: 260px;
+}
+
+.gallery-item:not(.big):not(.wide) {
   height: 200px;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
+}
 
-  background:
-    radial-gradient(circle at 20% 10%, rgba(212,175,55,0.25), transparent 50%),
-    radial-gradient(circle at 80% 90%, rgba(255,77,154,0.25), transparent 55%),
-    linear-gradient(180deg, #3a0f1f, #14060b);
+/* Hover Effect */
+.gallery-item:hover img {
+  transform: scale(1.12);
+}
 
-  border: 1px solid rgba(212,175,55,0.35);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
-
+/* Overlay */
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-
-  transition: transform .4s ease, box-shadow .4s ease;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-/* IMAGE */
-.gallery-item img {
-  max-height: 200px;
-  max-width: 300px;
-  object-fit: contain;
-  z-index: 2;
-  transition: transform .6s ease;
+.gallery-item:hover .overlay {
+  opacity: 1;
 }
 
-/* HOVER */
-.gallery-item:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 70px rgba(212,175,55,0.45);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
-
+/* Mobile */
 @media (max-width: 768px) {
-  .gallery-item {
-    height: 185px !important;
+  .gallery-item,
+  .gallery-item.big,
+  .gallery-item.wide {
+    height: 220px;
   }
 }
 
@@ -250,75 +256,130 @@
 </section>
 
 <!-- GALLERY -->
-<section class="container mt-4">
-  <div class="gallery-grid">
+<section class="container mt-5">
+  <div class="row g-3 gallery-grid">
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/1.png" alt="Bridal Makeup 1">
+    <!-- ROW 1 -->
+    <div class="col-lg-6 col-md-12">
+      <div class="gallery-item big">
+        <img src="Gallery/1.png" alt="">
+        <div class="overlay">Bridal Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/2.png" alt="Bridal Makeup 2">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/2.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/3.png" alt="Bridal Makeup 3">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/3.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/4.png" alt="Bridal Makeup 4">
+    <!-- ROW 2 -->
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/4.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/5.png" alt="Bridal Makeup 5">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/5.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/6.png" alt="Bridal Makeup 6">
+    <div class="col-lg-6 col-md-12">
+      <div class="gallery-item wide">
+        <img src="Gallery/6.png" alt="">
+        <div class="overlay">Party Look</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/7.png" alt="Bridal Makeup 7">
+    <!-- ROW 3 -->
+    <div class="col-lg-6 col-md-12">
+      <div class="gallery-item big">
+        <img src="Gallery/7.png" alt="">
+        <div class="overlay">Bridal Look</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/8.png" alt="Bridal Makeup 8">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/8.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/10.png" alt="Bridal Makeup 10">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/10.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/12.png" alt="Bridal Makeup 12">
+    <!-- ROW 4 -->
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/12.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/13.png" alt="Bridal Makeup 13">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/13.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/14.png" alt="Bridal Makeup 14">
+    <div class="col-lg-6 col-md-12">
+      <div class="gallery-item wide">
+        <img src="Gallery/14.png" alt="">
+        <div class="overlay">Reception Look</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/15.png" alt="Bridal Makeup 15">
+    <!-- ROW 5 -->
+    <div class="col-lg-6 col-md-12">
+      <div class="gallery-item big">
+        <img src="Gallery/15.png" alt="">
+        <div class="overlay">Bridal Look</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/16.png" alt="Bridal Makeup 16">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/16.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/17.png" alt="Bridal Makeup 17">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="gallery-item">
+        <img src="Gallery/17.png" alt="">
+        <div class="overlay">Makeup</div>
+      </div>
     </div>
 
-    <div class="gallery-item pre-anim">
-      <img src="Gallery/18.png" alt="Bridal Makeup 18">
+    <!-- ROW 6 -->
+    <div class="col-lg-12">
+      <div class="gallery-item wide">
+        <img src="Gallery/18.png" alt="">
+        <div class="overlay">Final Look</div>
+      </div>
     </div>
 
   </div>
 </section>
+
 
 
 </main>
